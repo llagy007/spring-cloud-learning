@@ -53,7 +53,11 @@ public class PaymentController {
     public CommonResult<Payment> getPaymentById(@PathVariable("id") Long id) {
 
         Payment result = paymentService.getPaymentById(id);
-        log.info("payment query result is: ", result);
+        log.info("AAAA payment query result is  "+ result);
+        System.out.println(result);
+        log.info("sss:"+result);
+        System.out.println("ddd:"+result);
+        System.out.println("kk:"+result.getSerial());
 
         if (result != null) {
             return new CommonResult(200, "success: " + serverPort, result);
